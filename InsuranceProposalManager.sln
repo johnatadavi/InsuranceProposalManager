@@ -1,0 +1,180 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+
+# ==========================================
+# Shared / Building Blocks
+# ==========================================
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"
+EndProject
+
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{B1B2C3D4-E5F6-7890-ABCD-EF1234567891}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Domain", "src\BuildingBlocks\BuildingBlocks.Domain\BuildingBlocks.Domain.csproj", "{C1B2C3D4-E5F6-7890-ABCD-EF1234567892}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Application", "src\BuildingBlocks\BuildingBlocks.Application\BuildingBlocks.Application.csproj", "{D1B2C3D4-E5F6-7890-ABCD-EF1234567893}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks.Infrastructure", "src\BuildingBlocks\BuildingBlocks.Infrastructure\BuildingBlocks.Infrastructure.csproj", "{E1B2C3D4-E5F6-7890-ABCD-EF1234567894}"
+EndProject
+
+# ==========================================
+# PropostaService
+# ==========================================
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PropostaService", "PropostaService", "{F1B2C3D4-E5F6-7890-ABCD-EF1234567895}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropostaService.Domain", "src\Services\PropostaService\PropostaService.Domain\PropostaService.Domain.csproj", "{11B2C3D4-E5F6-7890-ABCD-EF1234567896}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropostaService.Application", "src\Services\PropostaService\PropostaService.Application\PropostaService.Application.csproj", "{21B2C3D4-E5F6-7890-ABCD-EF1234567897}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropostaService.Infrastructure", "src\Services\PropostaService\PropostaService.Infrastructure\PropostaService.Infrastructure.csproj", "{31B2C3D4-E5F6-7890-ABCD-EF1234567898}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropostaService.Api", "src\Services\PropostaService\PropostaService.Api\PropostaService.Api.csproj", "{41B2C3D4-E5F6-7890-ABCD-EF1234567899}"
+EndProject
+
+# ==========================================
+# ContratacaoService
+# ==========================================
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContratacaoService", "ContratacaoService", "{51B2C3D4-E5F6-7890-ABCD-EF123456789A}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContratacaoService.Domain", "src\Services\ContratacaoService\ContratacaoService.Domain\ContratacaoService.Domain.csproj", "{61B2C3D4-E5F6-7890-ABCD-EF123456789B}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContratacaoService.Application", "src\Services\ContratacaoService\ContratacaoService.Application\ContratacaoService.Application.csproj", "{71B2C3D4-E5F6-7890-ABCD-EF123456789C}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContratacaoService.Infrastructure", "src\Services\ContratacaoService\ContratacaoService.Infrastructure\ContratacaoService.Infrastructure.csproj", "{81B2C3D4-E5F6-7890-ABCD-EF123456789D}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContratacaoService.Api", "src\Services\ContratacaoService\ContratacaoService.Api\ContratacaoService.Api.csproj", "{91B2C3D4-E5F6-7890-ABCD-EF123456789E}"
+EndProject
+
+# ==========================================
+# Tests
+# ==========================================
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A2B2C3D4-E5F6-7890-ABCD-EF123456789F}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PropostaService.UnitTests", "tests\PropostaService.UnitTests\PropostaService.UnitTests.csproj", "{B2B2C3D4-E5F6-7890-ABCD-EF1234567900}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContratacaoService.UnitTests", "tests\ContratacaoService.UnitTests\ContratacaoService.UnitTests.csproj", "{C2B2C3D4-E5F6-7890-ABCD-EF1234567901}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntegrationTests", "tests\IntegrationTests\IntegrationTests.csproj", "{D2B2C3D4-E5F6-7890-ABCD-EF1234567902}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchitectureTests", "tests\ArchitectureTests\ArchitectureTests.csproj", "{E2B2C3D4-E5F6-7890-ABCD-EF1234567903}"
+EndProject
+
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContractTests", "tests\ContractTests\ContractTests.csproj", "{F2B2C3D4-E5F6-7890-ABCD-EF1234567904}"
+EndProject
+
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1B2C3D4-E5F6-7890-ABCD-EF1234567892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B2C3D4-E5F6-7890-ABCD-EF1234567892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1B2C3D4-E5F6-7890-ABCD-EF1234567892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1B2C3D4-E5F6-7890-ABCD-EF1234567892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B2C3D4-E5F6-7890-ABCD-EF1234567893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B2C3D4-E5F6-7890-ABCD-EF1234567893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B2C3D4-E5F6-7890-ABCD-EF1234567893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B2C3D4-E5F6-7890-ABCD-EF1234567893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B2C3D4-E5F6-7890-ABCD-EF1234567894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B2C3D4-E5F6-7890-ABCD-EF1234567894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B2C3D4-E5F6-7890-ABCD-EF1234567894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B2C3D4-E5F6-7890-ABCD-EF1234567894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11B2C3D4-E5F6-7890-ABCD-EF1234567896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11B2C3D4-E5F6-7890-ABCD-EF1234567896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11B2C3D4-E5F6-7890-ABCD-EF1234567896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11B2C3D4-E5F6-7890-ABCD-EF1234567896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B2C3D4-E5F6-7890-ABCD-EF1234567897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B2C3D4-E5F6-7890-ABCD-EF1234567897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B2C3D4-E5F6-7890-ABCD-EF1234567897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B2C3D4-E5F6-7890-ABCD-EF1234567897}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B2C3D4-E5F6-7890-ABCD-EF1234567898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B2C3D4-E5F6-7890-ABCD-EF1234567898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B2C3D4-E5F6-7890-ABCD-EF1234567898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B2C3D4-E5F6-7890-ABCD-EF1234567898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41B2C3D4-E5F6-7890-ABCD-EF1234567899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41B2C3D4-E5F6-7890-ABCD-EF1234567899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41B2C3D4-E5F6-7890-ABCD-EF1234567899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41B2C3D4-E5F6-7890-ABCD-EF1234567899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B2C3D4-E5F6-7890-ABCD-EF123456789B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B2C3D4-E5F6-7890-ABCD-EF123456789B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B2C3D4-E5F6-7890-ABCD-EF123456789B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B2C3D4-E5F6-7890-ABCD-EF123456789B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B2C3D4-E5F6-7890-ABCD-EF123456789C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B2C3D4-E5F6-7890-ABCD-EF123456789C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B2C3D4-E5F6-7890-ABCD-EF123456789C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B2C3D4-E5F6-7890-ABCD-EF123456789C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81B2C3D4-E5F6-7890-ABCD-EF123456789D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81B2C3D4-E5F6-7890-ABCD-EF123456789D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81B2C3D4-E5F6-7890-ABCD-EF123456789D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81B2C3D4-E5F6-7890-ABCD-EF123456789D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B2C3D4-E5F6-7890-ABCD-EF123456789E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B2C3D4-E5F6-7890-ABCD-EF123456789E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B2C3D4-E5F6-7890-ABCD-EF123456789E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B2C3D4-E5F6-7890-ABCD-EF123456789E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B2C3D4-E5F6-7890-ABCD-EF1234567900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B2C3D4-E5F6-7890-ABCD-EF1234567900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B2C3D4-E5F6-7890-ABCD-EF1234567900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B2C3D4-E5F6-7890-ABCD-EF1234567900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2B2C3D4-E5F6-7890-ABCD-EF1234567901}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2B2C3D4-E5F6-7890-ABCD-EF1234567901}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2B2C3D4-E5F6-7890-ABCD-EF1234567901}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2B2C3D4-E5F6-7890-ABCD-EF1234567901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2B2C3D4-E5F6-7890-ABCD-EF1234567902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2B2C3D4-E5F6-7890-ABCD-EF1234567902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2B2C3D4-E5F6-7890-ABCD-EF1234567902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2B2C3D4-E5F6-7890-ABCD-EF1234567902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2B2C3D4-E5F6-7890-ABCD-EF1234567903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2B2C3D4-E5F6-7890-ABCD-EF1234567903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2B2C3D4-E5F6-7890-ABCD-EF1234567903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2B2C3D4-E5F6-7890-ABCD-EF1234567903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2B2C3D4-E5F6-7890-ABCD-EF1234567904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2B2C3D4-E5F6-7890-ABCD-EF1234567904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2B2C3D4-E5F6-7890-ABCD-EF1234567904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2B2C3D4-E5F6-7890-ABCD-EF1234567904}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B1B2C3D4-E5F6-7890-ABCD-EF1234567891} = {A1B2C3D4-E5F6-7890-ABCD-EF1234567890}
+		{C1B2C3D4-E5F6-7890-ABCD-EF1234567892} = {B1B2C3D4-E5F6-7890-ABCD-EF1234567891}
+		{D1B2C3D4-E5F6-7890-ABCD-EF1234567893} = {B1B2C3D4-E5F6-7890-ABCD-EF1234567891}
+		{E1B2C3D4-E5F6-7890-ABCD-EF1234567894} = {B1B2C3D4-E5F6-7890-ABCD-EF1234567891}
+		{F1B2C3D4-E5F6-7890-ABCD-EF1234567895} = {A1B2C3D4-E5F6-7890-ABCD-EF1234567890}
+		{11B2C3D4-E5F6-7890-ABCD-EF1234567896} = {F1B2C3D4-E5F6-7890-ABCD-EF1234567895}
+		{21B2C3D4-E5F6-7890-ABCD-EF1234567897} = {F1B2C3D4-E5F6-7890-ABCD-EF1234567895}
+		{31B2C3D4-E5F6-7890-ABCD-EF1234567898} = {F1B2C3D4-E5F6-7890-ABCD-EF1234567895}
+		{41B2C3D4-E5F6-7890-ABCD-EF1234567899} = {F1B2C3D4-E5F6-7890-ABCD-EF1234567895}
+		{51B2C3D4-E5F6-7890-ABCD-EF123456789A} = {A1B2C3D4-E5F6-7890-ABCD-EF1234567890}
+		{61B2C3D4-E5F6-7890-ABCD-EF123456789B} = {51B2C3D4-E5F6-7890-ABCD-EF123456789A}
+		{71B2C3D4-E5F6-7890-ABCD-EF123456789C} = {51B2C3D4-E5F6-7890-ABCD-EF123456789A}
+		{81B2C3D4-E5F6-7890-ABCD-EF123456789D} = {51B2C3D4-E5F6-7890-ABCD-EF123456789A}
+		{91B2C3D4-E5F6-7890-ABCD-EF123456789E} = {51B2C3D4-E5F6-7890-ABCD-EF123456789A}
+		{B2B2C3D4-E5F6-7890-ABCD-EF1234567900} = {A2B2C3D4-E5F6-7890-ABCD-EF123456789F}
+		{C2B2C3D4-E5F6-7890-ABCD-EF1234567901} = {A2B2C3D4-E5F6-7890-ABCD-EF123456789F}
+		{D2B2C3D4-E5F6-7890-ABCD-EF1234567902} = {A2B2C3D4-E5F6-7890-ABCD-EF123456789F}
+		{E2B2C3D4-E5F6-7890-ABCD-EF1234567903} = {A2B2C3D4-E5F6-7890-ABCD-EF123456789F}
+		{F2B2C3D4-E5F6-7890-ABCD-EF1234567904} = {A2B2C3D4-E5F6-7890-ABCD-EF123456789F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12345678-1234-1234-1234-123456789ABC}
+	EndGlobalSection
+EndGlobal
