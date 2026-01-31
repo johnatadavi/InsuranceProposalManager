@@ -1,0 +1,118 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database for PropostaService
+  proposta-db:
+    image: postgres:16-alpine
+    container_name: proposta-db
+    environment:
+      POSTGRES_DB: proposta_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - proposta-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - insurance-network
+
+  # PostgreSQL Database for ContratacaoService
+  contratacao-db:
+    image: postgres:16-alpine
+    container_name: contratacao-db
+    environment:
+      POSTGRES_DB: contratacao_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - contratacao-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - insurance-network
+
+  # RabbitMQ for messaging
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "check_running"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - insurance-network
+
+  # PropostaService API
+  proposta-api:
+    build:
+      context: .
+      dockerfile: src/Services/PropostaService/PropostaService.Api/Dockerfile
+    container_name: proposta-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__PropostaDb: "Host=proposta-db;Port=5432;Database=proposta_db;Username=postgres;Password=postgres"
+      RabbitMQ__Host: rabbitmq
+      RabbitMQ__Username: guest
+      RabbitMQ__Password: guest
+    ports:
+      - "5010:8080"
+    depends_on:
+      proposta-db:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - insurance-network
+
+  # ContratacaoService API
+  contratacao-api:
+    build:
+      context: .
+      dockerfile: src/Services/ContratacaoService/ContratacaoService.Api/Dockerfile
+    container_name: contratacao-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__ContratacaoDb: "Host=contratacao-db;Port=5432;Database=contratacao_db;Username=postgres;Password=postgres"
+      Services__PropostaService__Url: "http://proposta-api:8080"
+      RabbitMQ__Host: rabbitmq
+      RabbitMQ__Username: guest
+      RabbitMQ__Password: guest
+    ports:
+      - "5020:8080"
+    depends_on:
+      contratacao-db:
+        condition: service_healthy
+      proposta-api:
+        condition: service_started
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - insurance-network
+
+volumes:
+  proposta-db-data:
+  contratacao-db-data:
+  rabbitmq-data:
+
+networks:
+  insurance-network:
+    driver: bridge

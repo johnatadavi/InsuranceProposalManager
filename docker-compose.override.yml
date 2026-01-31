@@ -1,0 +1,30 @@
+version: '3.8'
+
+# Docker Compose override for development environment
+
+services:
+  proposta-api:
+    build:
+      context: .
+      dockerfile: src/Services/PropostaService/PropostaService.Api/Dockerfile
+      target: build
+    volumes:
+      - .:/src
+      - ~/.nuget/packages:/root/.nuget/packages:ro
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    command: dotnet watch run --project /src/src/Services/PropostaService/PropostaService.Api/PropostaService.Api.csproj
+
+  contratacao-api:
+    build:
+      context: .
+      dockerfile: src/Services/ContratacaoService/ContratacaoService.Api/Dockerfile
+      target: build
+    volumes:
+      - .:/src
+      - ~/.nuget/packages:/root/.nuget/packages:ro
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    command: dotnet watch run --project /src/src/Services/ContratacaoService/ContratacaoService.Api/ContratacaoService.Api.csproj
