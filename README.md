@@ -654,8 +654,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 👤 Autor
 
-Desenvolvido como solução para desafio técnico de arquitetura de software.
-
+Johnata Davi
 ---
 
 ## 📚 Referências
