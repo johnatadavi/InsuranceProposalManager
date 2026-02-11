@@ -21,8 +21,8 @@ public class ContratacaoServiceWebApplicationFactory : WebApplicationFactory<glo
         PostgresContainerFixture postgresFixture,
         string? propostaServiceUrl = null)
     {
-        _postgresFixture = postgresFixture;
         _propostaServiceUrl = propostaServiceUrl;
+        _postgresFixture = postgresFixture;
     }
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
