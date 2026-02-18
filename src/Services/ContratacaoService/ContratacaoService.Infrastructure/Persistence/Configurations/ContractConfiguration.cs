@@ -37,7 +37,7 @@ public sealed class ContractConfiguration : IEntityTypeConfiguration<Contract>
             .IsRequired();
 
         builder.Property(c => c.HolderCpf)
-            .HasMaxLength(11)
+            .HasMaxLength(14)
             .IsRequired();
 
         builder.HasIndex(c => c.HolderCpf);
