@@ -20,8 +20,7 @@ public static class ProposalEndpoints
     public static void MapProposalEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/api/proposals")
-            .WithTags("Proposals")
-            .WithOpenApi();
+            .WithTags("Proposals");
 
         group.MapPost("/", CreateProposal)
             .WithName("CreateProposal")

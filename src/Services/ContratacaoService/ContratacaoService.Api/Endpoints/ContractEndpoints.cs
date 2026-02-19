@@ -17,8 +17,7 @@ public static class ContractEndpoints
     public static void MapContractEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/api/contracts")
-            .WithTags("Contracts")
-            .WithOpenApi();
+            .WithTags("Contracts");
 
         group.MapPost("/", CreateContract)
             .WithName("CreateContract")
