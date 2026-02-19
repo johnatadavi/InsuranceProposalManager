@@ -1,6 +1,6 @@
 # Insurance Proposal Manager
 
-Sistema de Gerenciamento de Propostas de Seguros desenvolvido com **Arquitetura Hexagonal**, **Domain-Driven Design (DDD)** e **Microservices** utilizando **.NET 8**.
+Sistema de Gerenciamento de Propostas de Seguros desenvolvido com **Arquitetura Hexagonal**, **Domain-Driven Design (DDD)** e **Microservices** utilizando **.NET 10**.
 
 ---
 
@@ -105,8 +105,8 @@ O **Insurance Proposal Manager** é uma solução para gerenciamento de proposta
 
 | Tecnologia | Versão | Propósito |
 |------------|--------|-----------|
-| .NET | 8.0 | Framework principal |
-| Entity Framework Core | 8.0.2 | ORM e persistência |
+| .NET | 10.0 | Framework principal |
+| Entity Framework Core | 10.0.0 | ORM e persistência |
 | PostgreSQL | 16 | Banco de dados |
 | MediatR | 14.0.0 | Mediador para CQRS |
 | FluentValidation | 11.9.0 | Validação de comandos |
@@ -236,7 +236,7 @@ InsuranceProposalManager/
 
 ## Pré-requisitos
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - [Git](https://git-scm.com/)
 
