@@ -4,7 +4,7 @@ Sistema de Gerenciamento de Propostas de Seguros desenvolvido com **Arquitetura 
 
 ---
 
-## 📋 Índice
+## Índice
 
 - [Visão Geral](#-visão-geral)
 - [Arquitetura](#-arquitetura)
@@ -19,7 +19,7 @@ Sistema de Gerenciamento de Propostas de Seguros desenvolvido com **Arquitetura 
 
 ---
 
-## 🎯 Visão Geral
+## Visão Geral
 
 O **Insurance Proposal Manager** é uma solução para gerenciamento de propostas de seguros composta por dois microserviços:
 
@@ -44,7 +44,7 @@ O **Insurance Proposal Manager** é uma solução para gerenciamento de proposta
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 ### Arquitetura Hexagonal (Ports & Adapters)
 
@@ -122,7 +122,7 @@ O **Insurance Proposal Manager** é uma solução para gerenciamento de proposta
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 InsuranceProposalManager/
@@ -234,7 +234,7 @@ InsuranceProposalManager/
 
 ---
 
-## ✅ Pré-requisitos
+## Pré-requisitos
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -242,7 +242,7 @@ InsuranceProposalManager/
 
 ---
 
-## 🚀 Como Executar
+## Como Executar
 
 ### Opção 1: Docker Compose (Recomendado)
 
@@ -291,7 +291,7 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up
 
 ---
 
-## 📡 Endpoints da API
+## Endpoints da API
 
 ### PropostaService (http://localhost:5010)
 
@@ -345,7 +345,7 @@ curl -X POST http://localhost:5020/api/contracts \
 
 ---
 
-## 🧪 Testes
+## Testes
 
 A suíte de testes inclui **4 categorias** de testes automatizados:
 
@@ -455,7 +455,7 @@ tests/
 
 ---
 
-## 🎨 Decisões de Design
+## Decisões de Design
 
 ### 1. Rich Domain Model
 
@@ -561,7 +561,7 @@ public sealed record ProposalApprovedIntegrationEvent
 
 ---
 
-## 📐 Padrões Utilizados
+## Padrões Utilizados
 
 | Padrão | Aplicação |
 |--------|-----------|
@@ -579,7 +579,7 @@ public sealed record ProposalApprovedIntegrationEvent
 
 ---
 
-## 📊 Diagrama de Sequência
+## Diagrama de Sequência
 
 ### Fluxo de Contratação
 
@@ -617,7 +617,7 @@ public sealed record ProposalApprovedIntegrationEvent
 
 ---
 
-## 🔒 Segurança (Extensões Futuras)
+## Segurança (Extensões Futuras)
 
 - [ ] Autenticação JWT
 - [ ] Rate Limiting
@@ -627,7 +627,7 @@ public sealed record ProposalApprovedIntegrationEvent
 
 ---
 
-## 📈 Observabilidade (Extensões Futuras)
+## Observabilidade (Extensões Futuras)
 
 - [ ] OpenTelemetry para tracing distribuído
 - [ ] Métricas com Prometheus
@@ -636,7 +636,7 @@ public sealed record ProposalApprovedIntegrationEvent
 
 ---
 
-## 🤝 Contribuindo
+## Contribuindo
 
 1. Fork o projeto
 2. Crie uma feature branch (`git checkout -b feature/nova-funcionalidade`)
@@ -646,18 +646,18 @@ public sealed record ProposalApprovedIntegrationEvent
 
 ---
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
-## 👤 Autor
+## Autor
 
 Johnata Davi
 ---
 
-## 📚 Referências
+## Referências
 
 - [Hexagonal Architecture - Alistair Cockburn](https://alistair.cockburn.us/hexagonal-architecture/)
 - [Domain-Driven Design - Eric Evans](https://domainlanguage.com/ddd/)
