@@ -4,6 +4,7 @@ using PropostaService.Api.Endpoints;
 using PropostaService.Application;
 using PropostaService.Infrastructure;
 using PropostaService.Infrastructure.Persistence;
+using Scalar.AspNetCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,14 +19,14 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 
 // Add services to the container
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
+builder.Services.AddOpenApi(options =>
 {
-    options.SwaggerDoc("v1", new()
+    options.AddDocumentTransformer((document, context, ct) =>
     {
-        Title = "Proposta Service API",
-        Version = "v1",
-        Description = "Insurance Proposal Management Service"
+        document.Info.Title = "Proposta Service API";
+        document.Info.Version = "v1";
+        document.Info.Description = "Insurance Proposal Management Service";
+        return Task.CompletedTask;
     });
 });
 
@@ -44,10 +45,16 @@ app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(options =>
+    // OpenAPI document endpoint
+    app.MapOpenApi();
+    
+    // Scalar API Reference UI
+    app.MapScalarApiReference(options =>
     {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Proposta Service API v1");
+        options
+            .WithTitle("Proposta Service API")
+            .WithTheme(ScalarTheme.BluePlanet)
+            .WithDefaultHttpClient(ScalarTarget.CSharp, ScalarClient.HttpClient);
     });
 
     // Apply migrations in development
